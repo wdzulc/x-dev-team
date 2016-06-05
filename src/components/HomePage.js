@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router';
 import ChartPage from './ChartPage.js';
 
 const HomePage = () => {
