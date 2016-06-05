@@ -24,8 +24,10 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "chart.js": "1.1.1",
     "object-assign": "4.1.0",
     "react": "15.0.2",
+    "react-chartjs": "0.7.3",
     "react-dom": "15.0.2",
     "react-redux": "4.4.5",
     "react-router": "2.4.0",
