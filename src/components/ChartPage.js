@@ -149,20 +149,16 @@ const db = [
 {period:"2016/01",nacional:"3.928566872186",yucatan:"-1.123947119449"}
 ];
 
-const dataPeriod = db.map((data) => {
-            return(data.period);
+let dataPeriod = db.map((data) => {
+            return data.period;
         });
 
-const dataNacional = db.map((data, index) => {
-        if(typeof data[index + 1].nacional == "undefined"){
-            return(((data[index + 1].nacional % data.nacional)-1) * 100);
-        }
+let dataNacional = db.map((data, index) => {
+            return (((data.nacional[index - 1] % data.nacional)-1) * 100);
 });
 
-const dataYucatan = db.map((data, index) => {
-        if(typeof data[index + 1].nacional == "undefined"){
-            return(((data[index + 1].nacional % data.nacional)-1) * 100);
-        }
+let dataYucatan = db.map((data, index) => {
+            return (((data.nacional[index - 1] % data.nacional)-1) * 100);
 });
 
 const chartData = {
