@@ -154,11 +154,17 @@ let dataPeriod = db.map((data) => {
         });
 
 let dataNacional = db.map((data, index) => {
-            return (((data.nacional[index - 1] % data.nacional)-1) * 100);
+
+            if(db[index + 1]){
+                return (((db[index + 1].yucatan / data.nacional)-1) * 100);
+            }
 });
 
 let dataYucatan = db.map((data, index) => {
-            return (((data.nacional[index - 1] % data.nacional)-1) * 100);
+            if(db[index + 1]){
+            return (((db[index + 1].nacional / data.nacional)-1) * 100);
+            }
+
 });
 
 const chartData = {
